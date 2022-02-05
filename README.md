@@ -1,6 +1,6 @@
 ## AutoKSD
 
-AutoKSD is a Jax implementation of Kernel Stein Discrepancy [[1](https://arxiv.org/pdf/1602.03253.pdf),[2](https://arxiv.org/pdf/1602.02964.pdf)] based on AutoDiff.
+AutoKSD is a Jax implementation of Kernelized Stein Discrepancy [[1](https://arxiv.org/pdf/1602.03253.pdf),[2](https://arxiv.org/pdf/1602.02964.pdf)] based on AutoDiff.
 
 The following code shows the simplicity of using AutoKSD.
 ``` python
