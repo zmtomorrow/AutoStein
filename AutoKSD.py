@@ -32,13 +32,13 @@ class KSD:
             stein_sum += self.batch_h(x,samples).sum()
         return stein_sum
 
-    def U_stats(self,samples):
-        n=samples.shape[0]
-        self.U= self.ksd_sum(samples,n)/(n**2)
-        return self.U
-    
     def V_stats(self,samples):
         n=samples.shape[0]
-        self.V= (self.ksd_sum(samples,n)-self.batch_h(samples,samples).sum())/(n*(n-1))
+        self.V= self.ksd_sum(samples,n)/(n**2)
         return self.V
+    
+    def U_stats(self,samples):
+        n=samples.shape[0]
+        self.U= (self.ksd_sum(samples,n)-self.batch_h(samples,samples).sum())/(n*(n-1))
+        return self.U
 
