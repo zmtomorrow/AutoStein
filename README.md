@@ -1,4 +1,4 @@
-# AutoStein: a JAX package for Stein methods with AutoDiff.
+## AutoStein: a JAX package of Stein methods with AutoDiff.
 This package including following methods:
 * AutoKSD: Kernelized Stein Discrepancy [[1](https://arxiv.org/pdf/1602.03253.pdf),[2](https://arxiv.org/pdf/1602.02964.pdf)].
 * AutoSVGD: Stein Variational Gradient Descent [[1](https://arxiv.org/pdf/1608.04471.pdf)].
