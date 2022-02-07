@@ -6,7 +6,7 @@ from functools import partial
 
 class SVGD:
     def __init__(self, kernel,score):
-        self.batch_k = jit(vmap(kernel,in_axes=(0, 0),out_axes=0))
+        self.batch_k = jit(vmap(lambda x,y: jnp.expand_dims(kernel(x,y),-1),in_axes=(0, 0),out_axes=0))        
         self.batch_grad_x = jit(vmap(grad(kernel,0),in_axes=(0, 0),out_axes=0))
         self.score = jit(vmap(score,in_axes=0,out_axes=0))
         
